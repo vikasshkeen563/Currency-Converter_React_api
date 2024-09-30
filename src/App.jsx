@@ -12,7 +12,7 @@ function App() {
 
   const currencyInfo = useCurrencyInfo(from)
 
-  const options = Object.keys(currencyInfogit)
+  const options = Object.keys(currencyInfo)
 
   const swap = () => {
     setFrom(to)
@@ -67,7 +67,8 @@ function App() {
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
                             selectCurrency={to}
-                            amountDisable
+                            onAmountChange={(amount) => setAmount(amount)}
+
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
